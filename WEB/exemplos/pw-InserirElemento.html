@@ -1,0 +1,39 @@
+<html><head><title>Alteracao Dinamica de uma Form</title>
+        <script type = "text/javascript">
+
+            function addSpouse(theRadio) {
+                if (document.getElementById("newDiv") == null) {
+                    var newDiv = document.createElement("div");
+                    newDiv.setAttribute("id","newDiv");
+                    var newInput = document.createElement("input");
+                    newInput.setAttribute("type","text");
+                    newInput.setAttribute("id","spouseText");
+                    var nameText = document.createTextNode(" Nome da(o) Esposa(o)");
+                    newDiv.appendChild(newInput);
+                    newDiv.appendChild(nameText);
+                    newDiv.appendChild(document.createElement("br"));
+                    var theForm = document.getElementById("myForm");
+                    var theAddress = document.getElementById("address");
+                    theForm.insertBefore(newDiv, theAddress);
+                }
+            }
+            function removeSpouse(theRadio) {
+                if (document.getElementById("newDiv") != null) {
+                    var newDiv = document.getElementById("newDiv");
+                    var theForm = document.getElementById("myForm");
+                    myForm.removeChild(newDiv);
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id = "myForm">
+            <input type = "text" id = "name"> Nome<br>
+            Estado Civil:<br>
+            <input type = "radio" onClick = "removeSpouse(this);" name = "ms">Solteiro(a) <br>
+            <input type = "radio" onClick = "addSpouse(this);" name = "ms"> Casado(a)<br>
+            <input type = "text" id = "address"> Endereco <br>
+        </form>
+    </body>
+</html>

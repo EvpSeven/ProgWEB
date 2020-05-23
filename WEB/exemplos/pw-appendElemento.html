@@ -1,0 +1,18 @@
+<html><head><title>Inserir uma div</title>
+        <script type = "text/javascript">
+            function addDiv() {
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("id","newDiv");
+                var bodyTags = document.getElementsByTagName("body");
+                var thisBody = bodyTags[0];
+                thisBody.appendChild(newDiv);
+                var textNode = document.createTextNode("Sou a nova DIV ...");
+                newDiv.appendChild(textNode);
+            }
+        </script>
+    </head>
+    <body>
+        <a href = "http://www.ua.pt" onClick = "addDiv(); return false;">TPW - Adcionar novo div.</a>
+        <!-- o return false no fim do evento faz com que a tag HTML a não seja executada -->
+    </body>
+</html> 

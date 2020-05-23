@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tabela;</title>
+		<style>	.grafico {	background-color: red;	position:absolute; top:100px; left:450px;
+			}
+		</style>
+	</head>
+<body>
+
+<table summary="" border="1">
+<tr><td>graus</td><td>seno</td><td>coseno</td></tr>
+<script type="text/javascript">
+var anginicial=parseFloat(prompt("Angulo inicial=",0));
+var angfinal = parseFloat(prompt("Angulo final=",90));
+var delta = parseFloat(prompt("incremento=",5));
+for (ang=anginicial;ang <= angfinal; ang = ang + delta){
+	document.write("<tr><td>"+ang+"</td><td>"+Math.sin(ang/180.*Math.PI)+" </td><td>"+Math.cos(ang/180.*Math.PI)+"</td></tr>")
+}
+</script> 
+
+</table>
+<div class="grafico">
+<script> 
+for (ang=anginicial;ang <= angfinal; ang = ang + delta){
+	document.write("<img src='' height='"+Math.floor((Math.sin(ang/180.*Math.PI)*150) + 150)+"' width='2' />");
+}
+</script> 
+</div>
+</body>
+</html>

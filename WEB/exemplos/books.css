@@ -1,0 +1,30 @@
+books {
+	display: block;
+	width: 100%;
+	background-color:red;
+	background-image: url(officebooks.gif);
+	background-repeat: no-repeat;
+	background-position: 80% 10px;
+	margin: 0;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+book {
+	display: block;
+	background-color: Silver;
+	width: 50%;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+author, publisher, price, contentType, format, isbn {
+	display: block;
+	background-color: #ffe4c4;
+	font-size: x-small;
+	padding: 2px;
+}
+title {
+	display:block;
+	color: Maroon;
+	font-size: medium;
+}
